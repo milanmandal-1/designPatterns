@@ -1,23 +1,20 @@
-package patterns.src.main.java.design;
-
-import patterns.src.test.java.design.User;
+package design;
 
 public class Main {
-    public static void main(String[] args) {
-        User user1 = User.builder()
-                .setEmailId("d@gmail.com")
-                .setUserId("Milan")
-                .setUserName("Durgesh")
-                .build();
+	public static void main(String[] args) {
 
-        System.out.println(user1);
+		Apple apple = Apple.getApple();
+		System.out.println(apple.hashCode());
 
-        User user2 = User.builder()
-                .setEmailId("s@gmail.com")
-                .setUserId("user@1234")
-                .setUserName("milan")
-                .build();
+		Apple apple_Juice = Apple.getApple();
+		System.out.println(apple_Juice.hashCode());
 
-        System.out.println(user2);
-    }
+		Orange orange = Orange.getOrange();
+		System.out.println(orange.hashCode());
+		System.out.println(orange);
+
+		Orange orange_juice = Orange.getOrange();
+		System.out.println(orange_juice.hashCode());
+		System.out.println(orange);
+	}
 }
