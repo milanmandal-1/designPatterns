@@ -1,0 +1,11 @@
+package design;
+
+public class WebDevFactory extends EmployeeAbstractFactory {
+
+	@Override
+	public Employee getEmployee() {
+
+		return new WebDeveloper();
+
+	}
+}

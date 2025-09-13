@@ -2,13 +2,9 @@ package design;
 
 public class EmployeeFactory{
 
-public static Employee getEmployee(String empType) {
-	if(empType.trim().equalsIgnoreCase("Android Developer")) {
-		return new AndroidDeveloper();
-	}else if(empType.trim().equalsIgnoreCase("Web Developer")) {
-		return new WebDeveloper();
-	}else {
-		return null;
-	}
+public static Employee getEmployee(EmployeeAbstractFactory factory) {
+
+	return factory.getEmployee();
+
   }
 }
